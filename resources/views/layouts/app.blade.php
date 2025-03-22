@@ -35,6 +35,8 @@
                         href="/">Home</a>
                     <a class="px-4 py-2 rounded-lg text-white transition bg-gray-700 hover:bg-gray-600"
                         href="/blog">Blog</a>
+                    <a class="px-4 py-2 rounded-lg text-white transition bg-gray-700 hover:bg-gray-600"
+                        href="/about">About</a>
                     @guest
                         <a class="px-4 py-2 rounded-lg text-white transition bg-blue-600 hover:bg-blue-700"
                             href="{{ route('login') }}">

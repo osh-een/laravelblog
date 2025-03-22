@@ -19,4 +19,4 @@
     </p>
 </div>
 
-@endsection 
+@endsection

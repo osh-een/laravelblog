@@ -1,76 +1,91 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-4/5 m-auto text-center">
-        <div class="py-15 border-b border-gray-200">
-            <h1 class="text-6xl">
-                Blog Posts
-            </h1>
+    <!-- Background Image with Overlay -->
+    <div class="min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('/images/waves.jpg')">
+        <!-- Overlay to improve readability -->
+        <div class="min-h-screen bg-black/70 backdrop-blur-sm">
+            <!-- Header Section -->
+            <div class="w-4/5 m-auto text-center py-16">
+                <div class="border-b border-gray-300 pb-6">
+                    <h1 class="text-6xl font-extrabold text-white">
+                        Research Posts
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            @if (session()->has('message'))
+                <div class="w-4/5 m-auto mt-6 px-4 py-2 bg-green-500 text-white text-center rounded-xl shadow-lg">
+                    <p class="font-semibold">{{ session()->get('message') }}</p>
+                </div>
+            @endif
+
+            <!-- Create Post Button (for authenticated users) -->
+            @if (Auth::check())
+                <div class="pt-10 w-4/5 m-auto text-center">
+                    <a href="/blog/create"
+                        class="bg-blue-500 uppercase text-white text-xs font-extrabold py-3 px-6 rounded-3xl hover:bg-blue-600 transition duration-300">
+                        Create a New Post
+                    </a>
+                </div>
+            @endif
+
+            <!-- Grid for Displaying Posts -->
+            <div class="w-4/5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 py-10">
+                @foreach ($posts as $post)
+                    <div class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+                        <!-- Image -->
+                        <div class="w-full h-64 overflow-hidden">
+                            <img src="{{ asset('images/' . $post->image_path) }}" alt="{{ $post->title }}"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h2 class="text-3xl font-semibold text-gray-800 pb-4">
+                                {{ $post->title }}
+                            </h2>
+
+                            <span class="text-sm text-gray-500">
+                                By <span class="font-semibold text-gray-700">{{ $post->user->name }}</span>, on {{ date('jS M Y', strtotime($post->updated_at)) }}
+                            </span>
+
+                            <p class="text-lg text-gray-700 mt-6 mb-8 leading-relaxed">
+                                {{ Str::limit($post->description, 150) }}
+                            </p>
+
+                            <!-- Keep Reading Button -->
+                            <a href="/blog/{{ $post->slug }}"
+                                class="inline-block uppercase bg-blue-500 text-white text-lg font-semibold py-3 px-6 rounded-full transition duration-300 hover:bg-blue-600">
+                                Keep Reading
+                            </a>
+
+                            <!-- Edit and Delete Buttons (for post owner) -->
+                            @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+                                <div class="flex gap-6 mt-4">
+                                    <a href="/blog/{{ $post->slug }}/edit"
+                                        class="text-blue-600 hover:text-blue-800 font-semibold">
+                                        Edit
+                                    </a>
+
+                                    <form action="/blog/{{ $post->slug }}" method="POST">
+                                        @csrf
+                                        @method('delete')
+
+                                        <button class="text-red-500 font-semibold hover:text-red-700">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Spacer -->
+            <div class="h-24"></div>
         </div>
     </div>
-
-    @if (session()->has('message'))
-        <div class="w-4/5 m-auto mt-10 pl-2">
-            <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
-                {{ session()->get('message') }}
-            </p>
-        </div>
-    @endif
-
-    @if (Auth::check())
-        <div class="pt-15 w-4/5 m-auto">
-            <a href="/blog/create"
-                class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                Create post
-            </a>
-        </div>
-    @endif
-
-    @foreach ($posts as $post)
-        <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-            <div>
-                <img src="{{ asset('images/' . $post->image_path) }}" alt="">
-            </div>
-            <div>
-                <h2 class="text-gray-700 font-bold text-5xl pb-4">
-                    {{ $post->title }}
-                </h2>
-
-                <span class="text-gray-500">
-                    By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on
-                    {{ date('jS M Y', strtotime($post->updated_at)) }}
-                </span>
-
-                <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
-                    {{ $post->description }}
-                </p>
-
-                <a href="/blog/{{ $post->slug }}"
-                    class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
-                    Keep Reading
-                </a>
-
-                @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-                    <span class="float-right">
-                        <a href="/blog/{{ $post->slug }}/edit" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
-                            Edit
-                        </a>
-                    </span>
-
-                    <span class="float-right">
-                        <form action="/blog/{{ $post->slug }}" method="POST">
-                            @csrf
-                            @method('delete')
-
-                            <button class="text-red-500 pr-3" type="submit">
-                                Delete
-                            </button>
-
-                        </form>
-                    </span>
-                @endif
-            </div>
-        </div>
-    @endforeach
-    <div class="h-24 bg-white"></div>
 @endsection

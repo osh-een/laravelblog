@@ -3,11 +3,9 @@
 @section('content')
     <!-- Hero Section -->
     <section class="relative min-h-screen">
-        <!-- Background Image Container -->
         <div class="background-image absolute inset-0 z-0">
             <div class="bg-hero-overlay"></div>
 
-            <!-- Content Container -->
             <div class="relative z-10 pt-40 pb-28 px-4 min-h-screen flex items-center">
                 <div class="max-w-5xl mx-auto text-center space-y-8 w-full">
                     <div class="inline-block bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full">
@@ -22,18 +20,27 @@
                         Exploring and protecting Earth's final frontier - our oceans
                     </p>
 
+                    @auth
+                        <div class="bg-green-500/80 text-white px-6 py-3 rounded-lg inline-block mb-8">
+                            <p class="text-lg font-semibold">Thank you for joining the movement, {{ Auth::user()->name }}! 🌊
+                            </p>
+                        </div>
+                    @endauth
+
                     <div class="flex justify-center gap-4 flex-wrap">
                         <a href="/research" class="hero-cta marine-gradient text-white hover:bg-blue-800">
                             Explore Journeys
                         </a>
-                        <a href="/register" class="hero-cta bg-white text-blue-900 hover:bg-blue-50">
-                            Join the Movement
-                        </a>
+
+                        @guest
+                            <a href="/register" class="hero-cta bg-white text-blue-900 hover:bg-blue-50">
+                                Join the Movement
+                            </a>
+                        @endguest
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-- Ecosystems Section -->
@@ -45,58 +52,66 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Coral Kingdoms -->
-                <article class="ecosystem-card">
-                    <div class="card-image"
-                        style="background-image: url('/images/9d917bec1fe5feb863b3064ef3f1e84e505e0ccadbd1d3b421e34f0aae966e49.jpg')">
-                        <div class="card-overlay"></div>
-                        <h3 class="card-title">Coral Kingdoms</h3>
-                    </div>
-                    <div class="ecosystem-description">
-                        <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
-                            Vibrant underwater cities teeming with life
-                        </p>
-                    </div>
-                </article>
+                <a href="/research/Coral-Kingdoms" class="ecosystem-card">
+                    <article>
+                        <div class="card-image"
+                            style="background-image: url('/images/9d917bec1fe5feb863b3064ef3f1e84e505e0ccadbd1d3b421e34f0aae966e49.jpg')">
+                            <div class="card-overlay"></div>
+                            <h3 class="card-title">Coral Kingdoms</h3>
+                        </div>
+                        <div class="ecosystem-description">
+                            <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
+                                Vibrant underwater cities teeming with life
+                            </p>
+                        </div>
+                    </article>
+                </a>
 
                 <!-- Kelp Forests -->
-                <article class="ecosystem-card">
-                    <div class="card-image"
-                        style="background-image: url('/images/kelp_forest_douglas_klug_photo_lgdr.jpeg')" alt="hello">
-                        <div class="card-overlay"></div>
-                        <h3 class="card-title">Kelp Forests</h3>
-                    </div>
-                    <div class="ecosystem-description">
-                        <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
-                            Towering underwater ecosystems
-                        </p>
-                    </div>
-                </article>
+                <a href="/research/Kelp-Forests" class="ecosystem-card">
+                    <article>
+                        <div class="card-image"
+                            style="background-image: url('/images/kelp_forest_douglas_klug_photo_lgdr.jpeg')" alt="hello">
+                            <div class="card-overlay"></div>
+                            <h3 class="card-title">Kelp Forests</h3>
+                        </div>
+                        <div class="ecosystem-description">
+                            <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
+                                Towering underwater ecosystems
+                            </p>
+                        </div>
+                    </article>
+                </a>
 
                 <!-- Abyssal Zones -->
-                <article class="ecosystem-card">
-                    <div class="card-image" style="background-image: url('/images/Orpheus-underwater.jpg')">
-                        <div class="card-overlay"></div>
-                        <h3 class="card-title">Abyssal Zones</h3>
-                    </div>
-                    <div class="ecosystem-description">
-                        <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
-                            Mysteries of the deep sea
-                        </p>
-                    </div>
-                </article>
+                <a href="/research/Abyssal-Zones" class="ecosystem-card">
+                    <article>
+                        <div class="card-image" style="background-image: url('/images/Orpheus-underwater.jpg')">
+                            <div class="card-overlay"></div>
+                            <h3 class="card-title">Abyssal Zones</h3>
+                        </div>
+                        <div class="ecosystem-description">
+                            <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
+                                Mysteries of the deep sea
+                            </p>
+                        </div>
+                    </article>
+                </a>
 
                 <!-- Coastal Waters -->
-                <article class="ecosystem-card">
-                    <div class="card-image" style="background-image: url('/images/tnc_21503931.jpg')">
-                        <div class="card-overlay"></div>
-                        <h3 class="card-title">Coastal Waters</h3>
-                    </div>
-                    <div class="ecosystem-description">
-                        <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
-                            Where land meets sea
-                        </p>
-                    </div>
-                </article>
+                <a href="/research/Coastal-Waters" class="ecosystem-card">
+                    <article>
+                        <div class="card-image" style="background-image: url('/images/tnc_21503931.jpg')">
+                            <div class="card-overlay"></div>
+                            <h3 class="card-title">Coastal Waters</h3>
+                        </div>
+                        <div class="ecosystem-description">
+                            <p class="text-gray-700 text-lg text-center px-4 py-3 leading-relaxed">
+                                Where land meets sea
+                            </p>
+                        </div>
+                    </article>
+                </a>
             </div>
         </div>
     </section>
@@ -144,7 +159,7 @@
                     <div class="text-gray-600 text-lg mb-8">
                         <p>Our marine biologists are pioneering revolutionary coral propagation techniques...</p>
                     </div>
-                    <a href="research/reviving-coral-reefs-2" class="research-cta">
+                    <a href="research/reviving-coral-reefs" class="research-cta">
                         Read Study
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -159,12 +174,40 @@
     <!-- CTA Section -->
     <section class="bg-blue-900 text-white py-16">
         <div class="max-w-4xl mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">Make Waves of Change</h2>
-            <p class="text-xl mb-8">Join our global community of ocean defenders</p>
+            @auth
+                <h2 class="text-3xl font-bold mb-6">Thank You for Being a Member!</h2>
+                <p class="text-xl mb-8">Your support helps us protect the oceans and marine life.</p>
+            @else
+                <h2 class="text-3xl font-bold mb-6">Make Waves of Change</h2>
+                <p class="text-xl mb-8">Join our global community of ocean defenders</p>
+            @endauth
+
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/register" class="cta-button-primary">Become a Member</a>
+                @guest
+                    <a href="/register" class="cta-button-primary">Become a Member</a>
+                @endguest
+                <a href="/help" class="cta-button-primary">Donate here</a>
             </div>
         </div>
     </section>
     <div class="h-24 bg-white"></div>
 @endsection
+
+<style>
+    .ecosystem-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ecosystem-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-overlay {
+        transition: background-color 0.3s ease;
+    }
+
+    .ecosystem-card:hover .card-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+</style>

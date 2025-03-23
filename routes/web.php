@@ -30,3 +30,5 @@ use App\Http\Controllers\CommentController;
 Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store')->middleware('auth');
 
 Route::view('/help', 'help');
+
+Route::view('/marineLife', 'marineLife');

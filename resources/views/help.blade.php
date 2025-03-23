@@ -66,7 +66,10 @@
             <div class="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-lg">
                 <p class="text-gray-600 mb-4">Take our quiz to see how much you know about marine conservation.</p>
                 <div class="flex justify-center">
-                    <a href="#" class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Start Quiz</a>
+                    <a href="https://www.wwf.org.uk/learn/quizzes/deep-blue-sea-quiz"
+                        class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">
+                        Take the Quiz
+                    </a>
                 </div>
             </div>
         </div>
@@ -102,7 +105,8 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Community Forums</h3>
                     <p class="text-gray-600 mb-4">Join discussions with like-minded individuals.</p>
                     <div class="flex justify-center">
-                        <a href="https://www.aquariumforums.co.uk/" class="text-blue-500 hover:text-blue-700">Join the Community &rarr;</a>
+                        <a href="https://www.aquariumforums.co.uk/" class="text-blue-500 hover:text-blue-700">Join the
+                            Community &rarr;</a>
                     </div>
                 </div>
             </div>

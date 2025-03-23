@@ -1,32 +1,65 @@
-## Laravel 8 Complete Blog
+# Project Name
 
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
+    Oceans Echo
 
-•	Author: Code With Dary <br>
-•	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
-•	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
+## About
 
-## Requirements
-•	PHP 7.3 or higher <br>
-•	Node 12.13.0 or higher <br>
+> This project is a web application designed to educate users about marine conservation through interactive quizzes and resources. It features a user-friendly interface, dynamic content, quizzes, and a possibility to donate to marine life through external websites.
 
-## Usage <br>
-Setting up your development environment on your local machine: <br>
-```
-git clone git@github.com:codewithdary/laravel-8-complete-blog.git
-cd laravel-8-complete-blog
-cp .env.example .env
-composer install
-php artisan key:generate
-php artisan cache:clear && php artisan config:clear
-php artisan serve
-```
+---
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Setup Instructions](#setup-instructions)
+4. [Configuration](#configuration)
+5. [Running the Project](#running-the-project)
+---
+
+## Features
+
+- **Interactive Quizzes**: Users can take quizzes to test their knowledge about marine life and conservation.
+- **Responsive Design**: The application is fully responsive and works seamlessly on desktop, tablet, and mobile devices.
+- **Dynamic Content**: Content is fetched dynamically from external APIs or a database.
+- **User-Friendly Interface**: Clean and intuitive UI/UX design for easy navigation.
+- **Educational Resources**: Access to articles, videos, and other resources about marine conservation.
+
+---
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, Tailwind CSS, JavaScript
+- **Backend**: Laravel, PHP
+- **Database**: MySQL
+- **Version Control**: Git, GitHub
+- **Other Tools**: Composer, npm
+
+---
+
+## Setup Instructions
+
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+
+- [PHP](https://www.php.net/downloads) (version 8.0 or higher)
+- [Composer](https://getcomposer.org/)
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- [MySQL](https://dev.mysql.com/downloads/) or any other database of your choice
+- [Git](https://git-scm.com/)
+
+### Running the Project
+
+```bash
+git clone https://github.com/osh-een/laravelblog.git
+cd laravelblog
 
 ## Before starting <br>
 Create a database <br>
 ```
-mysql
-create database laravelblog;
+mysql -u root -p
+CREATE DATABASE laravelblog;
 exit;
 ```
 
@@ -42,8 +75,7 @@ DB_PASSWORD={PASSWORD}
 
 Migrate the tables
 ```
+php artisan key:generate
+```
 php artisan migrate
 ```
-
-## Contributing
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.

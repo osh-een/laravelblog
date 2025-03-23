@@ -5,7 +5,7 @@
     <div class="w-full mx-auto px-4 sm:px-8 lg:px-16 py-12 bg-gradient-to-r from-blue-50 to-purple-50">
         <!-- Back Button -->
         <div class="mb-8">
-            <a href="{{ url()->previous() }}" class="text-blue-500 hover:text-blue-700 font-semibold text-xl">
+            <a href="{{ url('/research') }}" class="text-blue-500 hover:text-blue-700 font-semibold text-xl">
                 &larr; Back to Posts
             </a>
         </div>

@@ -17,8 +17,9 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div id="app">
+<body class="bg-gray-100 antialiased leading-none font-sans">
+    <div id="app" class="flex flex-col">
+        <!-- Header -->
         <header class="bg-gray-900 py-4 shadow-lg">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <!-- Logo -->
@@ -48,12 +49,12 @@
                             <button id="dropdownButton"
                                 class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-300 hover:text-white transition focus:outline-none">
                                 <span>{{ Auth::user()->name }}</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
 
-                            <!-- Dropdown Content (Hidden by Default) -->
                             <div id="dropdownMenu"
                                 class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg hidden z-50">
                                 <a href="{{ route('logout') }}"
@@ -71,16 +72,18 @@
             </div>
         </header>
 
-        <div>
+        <!-- Main Content -->
+        <main class="flex-grow">
             @yield('content')
-        </div>
+        </main>
 
-        <div>
+        <!-- Footer -->
+        <footer class="bg-blue-900 text-white">
             @include('layouts.footer')
-        </div>
+        </footer>
     </div>
 
-    <!-- JavaScript for Click Dropdown -->
+    <!-- JavaScript for Dropdown -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const dropdownButton = document.getElementById("dropdownButton");
@@ -90,7 +93,6 @@
                 dropdownMenu.classList.toggle("hidden");
             });
 
-            // Close dropdown when clicking outside
             document.addEventListener("click", function (event) {
                 if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.classList.add("hidden");

@@ -6,16 +6,19 @@
             <ul class="space-y-2">
                 <li><a href="/" class="footer-link">Home</a></li>
                 <li><a href="/research" class="footer-link">Research</a></li>
-                <li><a href="/login" class="footer-link">Login</a></li>
+                <li><a href="/marineLife" class="footer-link">Marine life</a></li>
+                <li><a href="/help" class="footer-link">Help us</a></li>
+                <li><a href="/about" class="footer-link">About us</a></li>
             </ul>
         </div>
 
         <!-- Find Us Section -->
         <div class="mb-8 sm:mb-0">
-            <h3 class="text-xl font-bold text-white mb-4">Find Us</h3>
+            <h3 class="text-xl font-bold text-white mb-4">Find Us / Help us</h3>
             <ul class="space-y-2">
                 <li><a href="/about" class="footer-link">Our Mission</a></li>
                 <li><a href="/about" class="footer-link">Contact</a></li>
+                <li><a href="/help" class="footer-link">Donate</a></li>
             </ul>
         </div>
 

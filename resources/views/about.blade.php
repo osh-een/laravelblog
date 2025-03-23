@@ -88,4 +88,5 @@
             </div>
         </div>
     </main>
+    <div class="h-24 bg-white"></div>
 @endsection

@@ -166,4 +166,5 @@
             </div>
         </div>
     </section>
+    <div class="h-24 bg-white"></div>
 @endsection

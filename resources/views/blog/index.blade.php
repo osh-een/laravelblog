@@ -24,7 +24,7 @@
             <!-- Create Post Button (for authenticated users) -->
             @if (Auth::check())
                 <div class="pt-10 w-4/5 m-auto text-center">
-                    <a href="/blog/create"
+                    <a href="/research/create"
                         class="bg-blue-500 uppercase text-white text-xs font-extrabold py-3 px-6 rounded-3xl hover:bg-blue-600 transition duration-300">
                         Create a New Post
                     </a>
@@ -56,7 +56,7 @@
                             </p>
 
                             <!-- Keep Reading Button -->
-                            <a href="/blog/{{ $post->slug }}"
+                            <a href="/research/{{ $post->slug }}"
                                 class="inline-block uppercase bg-blue-500 text-white text-lg font-semibold py-3 px-6 rounded-full transition duration-300 hover:bg-blue-600">
                                 Keep Reading
                             </a>
@@ -64,12 +64,12 @@
                             <!-- Edit and Delete Buttons (for post owner) -->
                             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                                 <div class="flex gap-6 mt-4">
-                                    <a href="/blog/{{ $post->slug }}/edit"
+                                    <a href="/research/{{ $post->slug }}/edit"
                                         class="text-blue-600 hover:text-blue-800 font-semibold">
                                         Edit
                                     </a>
 
-                                    <form action="/blog/{{ $post->slug }}" method="POST">
+                                    <form action="/research/{{ $post->slug }}" method="POST">
                                         @csrf
                                         @method('delete')
 

@@ -15,6 +15,8 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="bg-gray-100 antialiased leading-none font-sans">
@@ -35,7 +37,7 @@
                     <a class="px-4 py-2 rounded-lg text-white transition bg-gray-700 hover:bg-gray-600"
                         href="/">Home</a>
                     <a class="px-4 py-2 rounded-lg text-white transition bg-gray-700 hover:bg-gray-600"
-                        href="/blog">Research</a>
+                        href="/research">Research</a>
                     <a class="px-4 py-2 rounded-lg text-white transition bg-gray-700 hover:bg-gray-600"
                         href="/about">About</a>
                     @guest
@@ -49,8 +51,7 @@
                             <button id="dropdownButton"
                                 class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-300 hover:text-white transition focus:outline-none">
                                 <span>{{ Auth::user()->name }}</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>

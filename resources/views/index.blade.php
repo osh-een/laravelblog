@@ -23,7 +23,7 @@
                     </p>
 
                     <div class="flex justify-center gap-4 flex-wrap">
-                        <a href="/blog" class="hero-cta marine-gradient text-white hover:bg-blue-800">
+                        <a href="/research" class="hero-cta marine-gradient text-white hover:bg-blue-800">
                             Explore Journeys
                         </a>
                         <a href="/register" class="hero-cta bg-white text-blue-900 hover:bg-blue-50">
@@ -144,7 +144,7 @@
                     <div class="text-gray-600 text-lg mb-8">
                         <p>Our marine biologists are pioneering revolutionary coral propagation techniques...</p>
                     </div>
-                    <a href="blog/reviving-coral-reefs-2" class="research-cta">
+                    <a href="research/reviving-coral-reefs-2" class="research-cta">
                         Read Study
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

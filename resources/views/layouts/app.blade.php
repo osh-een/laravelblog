@@ -56,10 +56,6 @@
                             <!-- Dropdown Content (Hidden by Default) -->
                             <div id="dropdownMenu"
                                 class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg hidden z-50">
-                                <a href="#"
-                                    class="block px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 transition">Profile</a>
-                                <a href="#"
-                                    class="block px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 transition">Settings</a>
                                 <a href="{{ route('logout') }}"
                                     class="block px-4 py-2 rounded-lg text-red-400 hover:bg-gray-700 transition"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

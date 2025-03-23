@@ -42,12 +42,6 @@
                             href="{{ route('login') }}">
                             {{ __('Login') }}
                         </a>
-                        @if (Route::has('register'))
-                            <a class="px-4 py-2 rounded-lg text-white transition bg-gray-700 hover:bg-gray-600"
-                                href="{{ route('register') }}">
-                                {{ __('Register') }}
-                            </a>
-                        @endif
                     @else
                         <!-- Dropdown Menu -->
                         <div class="relative">

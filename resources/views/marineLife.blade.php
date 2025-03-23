@@ -46,20 +46,20 @@
                         class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Dolphin</h3>
                     <p class="text-gray-600 mb-4">Highly intelligent and social marine mammals.</p>
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Learn More &rarr;</a>
+                    <a href="research/Exploring-Dolphins" class="text-blue-500 hover:text-blue-700">Learn More &rarr;</a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <img src="{{ asset('images/clownfish.jpg') }}" alt="Clownfish"
                         class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Clownfish</h3>
                     <p class="text-gray-600 mb-4">Colorful fish that live in symbiotic relationships with sea anemones.</p>
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Learn More &rarr;</a>
+                    <a href="research/Exploring-Clownfish" class="text-blue-500 hover:text-blue-700">Learn More &rarr;</a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <img src="{{ asset('images/coral.jpg') }}" alt="Coral" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Coral</h3>
                     <p class="text-gray-600 mb-4">Tiny organisms that build vast underwater ecosystems.</p>
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Learn More &rarr;</a>
+                    <a href="research/Exploring-Coral" class="text-blue-500 hover:text-blue-700">Learn More &rarr;</a>
                 </div>
             </div>
         </div>

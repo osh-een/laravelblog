@@ -24,3 +24,9 @@ Auth::routes();
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::view('/about', 'about');
+
+use App\Http\Controllers\CommentController;
+
+Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store')->middleware('auth');
+
+Route::view('/help', 'help');

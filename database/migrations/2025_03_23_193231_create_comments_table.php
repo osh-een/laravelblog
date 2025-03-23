@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCommentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedInteger('post_id'); // Change to match posts.id type
+            $table->unsignedBigInteger('user_id'); // Keep this as is (matches users.id)
+            $table->text('content');
+            $table->timestamps();
+
+            // Foreign key constraints
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+    }
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('comments');
+    }
+}

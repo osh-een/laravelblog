@@ -45,7 +45,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <!-- Team Member 1 -->
                         <div class="flex items-center space-x-4">
-                            <img src="" alt="Dr. Sarah Ocean"
+                            <img src="images/woman.jpg" alt="Dr. Sarah Ocean"
                                 class="w-20 h-20 rounded-full shadow-lg object-cover">
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-800">Dr. Sarah Ocean</h3>
@@ -55,7 +55,7 @@
                         </div>
                         <!-- Team Member 2 -->
                         <div class="flex items-center space-x-4">
-                            <img src="" alt="Alex Waters"
+                            <img src="images/man.jpg" alt="Alex Waters"
                                 class="w-20 h-20 rounded-full shadow-lg object-cover">
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-800">Alex Waters</h3>

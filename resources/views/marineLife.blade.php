@@ -8,12 +8,6 @@
             <p class="text-xl text-gray-600 mt-4">Explore the fascinating world of marine species.</p>
         </div>
 
-        <!-- Search Bar -->
-        <div class="mb-16">
-            <input type="text" placeholder="Search for a species..."
-                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
-        </div>
-
         <!-- Categories -->
         <div class="mb-16">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Categories</h2>

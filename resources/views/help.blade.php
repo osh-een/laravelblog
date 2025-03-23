@@ -38,7 +38,10 @@
             <div class="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-lg">
                 <p class="text-gray-600 mb-4">Join hands with organizations dedicated to marine conservation.</p>
                 <div class="flex justify-center">
-                    <a href="#" class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Find Opportunities</a>
+                    <a href="https://www.volunteerworld.com/en/volunteer-abroad/marine-conservation?gad_source=1&gclid=Cj0KCQjw4v6-BhDuARIsALprm30ulKeSRaJjZgZu1fW113KYkUSVfhTcyzVgzm5Iu7c2ZfE1xlZNzd4aAmfcEALw_wcB"
+                        class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">
+                        Find Opportunities
+                    </a>
                 </div>
             </div>
         </div>
@@ -49,7 +52,10 @@
             <div class="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-lg">
                 <p class="text-gray-600 mb-4">Your contribution can help protect marine life and habitats.</p>
                 <div class="flex justify-center">
-                    <a href="#" class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Donate Now</a>
+                    <a href="https://www.mcsuk.org/make-a-donation/"
+                        class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">
+                        Donate Now
+                    </a>
                 </div>
             </div>
         </div>
@@ -74,7 +80,10 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Educational Articles</h3>
                     <p class="text-gray-600 mb-4">Read articles to learn more about marine conservation.</p>
                     <div class="flex justify-center">
-                        <a href="#" class="text-blue-500 hover:text-blue-700">Explore Articles &rarr;</a>
+                        <a href="https://www.frontiersin.org/journals/marine-science/articles"
+                            class="text-blue-500 hover:text-blue-700">
+                            Explore Articles &rarr;
+                        </a>
                     </div>
                 </div>
 
@@ -83,7 +92,8 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Videos and Documentaries</h3>
                     <p class="text-gray-600 mb-4">Watch videos to understand the challenges facing our oceans.</p>
                     <div class="flex justify-center">
-                        <a href="#" class="text-blue-500 hover:text-blue-700">Watch Videos &rarr;</a>
+                        <a href="https://fordhaminstitute.org/national/commentary/netflix-academy-10-best-streaming-videos-aquatic-life"
+                            class="text-blue-500 hover:text-blue-700">Watch Videos &rarr;</a>
                     </div>
                 </div>
 
@@ -92,18 +102,9 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Community Forums</h3>
                     <p class="text-gray-600 mb-4">Join discussions with like-minded individuals.</p>
                     <div class="flex justify-center">
-                        <a href="#" class="text-blue-500 hover:text-blue-700">Join the Community &rarr;</a>
+                        <a href="https://www.aquariumforums.co.uk/" class="text-blue-500 hover:text-blue-700">Join the Community &rarr;</a>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Call-to-Action Section -->
-        <div class="text-center bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Make a Difference?</h2>
-            <p class="text-xl text-gray-600 mb-6">Start today by taking one of the actions above.</p>
-            <div class="flex justify-center">
-                <a href="#" class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Get Started</a>
             </div>
         </div>
     </div>

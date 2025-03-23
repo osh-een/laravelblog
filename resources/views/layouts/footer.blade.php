@@ -32,7 +32,7 @@
     </div>
 
     <div class="w-4/5 m-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left pt-6">
-        <p class="text-sm text-blue-200">&copy; 2023 Guardians of the Blue. All Rights Reserved.</p>
+        <p class="text-sm text-blue-200">&copy; 2023 {{ config('app.name') }}. All Rights Reserved.</p>
         <div class="flex space-x-4 mt-4 md:mt-0">
             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
